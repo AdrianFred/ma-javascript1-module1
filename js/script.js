@@ -53,7 +53,7 @@ listCall(cats);
 function createCats(cats) {
   let output = "";
   for (let i = 0; i < cats.length; i++) {
-    if (cats[i].age) {
+    if (typeof cats[i].age === "number") {
       output += `<div><h5>${cats[i].name}</h5><p>${cats[i].age}</p></div>`;
     } else {
       output += `<div><h5>${cats[i].name}</h5><p>Age unknown</p></div>`;
